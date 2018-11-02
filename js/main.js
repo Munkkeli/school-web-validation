@@ -9,13 +9,13 @@ const validateField = (name, value) => {
       if (value.length > 0) return true;
 
     case 'email':
-      return validateRegex(value, /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+      return validateRegex(value, /[^@]+@[^\.]+\..+/);
 
     case 'phone':
-      return validateRegex(value, /^\+[0-9]{6,13}/);
+      return validateRegex(value, /^\+[0-9]{6,13}$/);
 
     case 'post':
-      return validateRegex(value, /^[0-9]{5}/);
+      return validateRegex(value, /^[0-9]{5}$/);
   };
 
   return false;
