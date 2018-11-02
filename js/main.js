@@ -44,5 +44,5 @@ const validateForm = (event) => {
   }
 };
 
-const button = document.getElementById('javascript-submit');
-if (button) button.addEventListener('click', validateForm);
+const form = document.getElementById('form');
+if (form) form.addEventListener('submit', validateForm);
